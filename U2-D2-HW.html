@@ -3,7 +3,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style></style>
+    <style>
+      /* 1. rite a selector to target the h1 in the first “hero” section */
+      h1 {
+        background-color: aqua;
+      }
+      /* 2. Write a selector to target every children of the navbar */
+      nav span {
+        color: red;
+      }
+      /* 3. Write a selector to target the “continue reading…” inside the jumbotron */
+      div p .font-weight-bold {
+        color: black;
+      }
+
+      /* 4. Write a selector to target the first blogpost */
+      .blog-post:first-of-type {
+        background-color: coral;
+      }
+      /* 5. Write a selector to target the first blogpost <hr> and turn it red */
+      .blog-post hr {
+        background-color: red;
+      }
+      /* 6. Write a selector to target the “even” links in the navbar */
+      nav :nth-of-type(2n) {
+        color: black;
+      }
+      /* 7. Write a selector to target all the <li> into the first ordered-list in the sidebar ( Archives ) */
+      .mb-0 > li > a {
+        color: brown;
+      }
+      /* 8. Write a selector to target the second blog-post author */
+      .blog-post:nth-child(3) .blog-post-meta a {
+        color: red;
+      }
+
+      /* 9. Write a selector to target the second <li> in the third blog-post unordered-list */
+      .blog-post:last-of-type ul li:nth-child(2) {
+        color: blue;
+      }
+
+      /* 10. Write a selector to target the “back to top” link you can find at the bottom-right corner */
+      .mb-3 {
+        color: coral;
+      }
+
+      /* 11. Write a selector to target the “Newer” button at the bottom */
+    </style>
     <meta charset="utf-8" />
     <meta
       name="viewport"
