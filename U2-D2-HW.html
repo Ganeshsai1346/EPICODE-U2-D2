@@ -44,11 +44,23 @@
       }
 
       /* 10. Write a selector to target the “back to top” link you can find at the bottom-right corner */
-      .mb-3 {
+      .float-right {
         color: coral;
       }
 
       /* 11. Write a selector to target the “Newer” button at the bottom */
+      .blog-pagination .btn-outline-secondary {
+        background-color: black;
+      }
+
+      /* 12. Write a selector to target the footer’s second link */
+      .text-center a:last-of-type {
+        background-color: blue;
+      }
+
+      .blog-post-meta a:hover {
+        color: black;
+      }
     </style>
     <meta charset="utf-8" />
     <meta
@@ -459,16 +471,57 @@
     <script>
       /* JS Exercises should go here */
       // Write a JavaScript functionality to add a new link into the navbar
+      function linkNew() {
+        let newLink = document.querySelector("nav");
+        let createNewLink = document.createElement("span");
+        createNewLink.innerText = "Ganesh sai";
+        newLink.appendChild(createNewLink);
+      }
+      linkNew();
+
       // Write a JavaScript functionality to change the color of the main heading title
+      function colorChange() {
+        let changeColor = document.querySelector("h1");
+        changeColor.style.color = "pink";
+      }
+      colorChange();
+
       // Write a JavaScript functionality to change the background of the jumbotron
 
-      // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
+      function changeBg() {
+        let jumbotronChange = document.querySelector("div .jumbotron");
+        jumbotronChange.style.backgroundColor = "red";
+      }
+      changeBg();
 
+      // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
+      function removeTwitter() {
+        let twitterLink = document.querySelector(
+          ".col-md-4 div:last-of-type ol li:nth-child(2) a"
+        );
+        twitterLink.remove();
+      }
+
+      window.onload = {
+        removeTwitter,
+      };
       // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
       // Write a JavaScript functionality to add a new Blog Post (div with title and text)
       // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
       // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
+
+      function alertHover() {
+        let authors = document.querySelectorAll(".blog-post-meta a");
+        for (let i = 0; i < authors.length; i++) {
+          authors[i].style.href = function () {
+            alert(e.target.href);
+          };
+        }
+      }
+      alertHover();
+
       // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
     </script>
   </body>
